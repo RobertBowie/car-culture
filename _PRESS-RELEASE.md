@@ -18,27 +18,44 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+'Car Culture' or C²
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+An app for any car enthusiast looking for reliable, real world info on their vehicle.
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+C² answers the question 'What next?'.  You tell the app a bit about your car and the app digs through
+our database of user experiences for the next major issues (or upgrades!) you should watch out for.  The more users
+that are a part of Car Culture the more reliable and comprehensive our information becomes.
 
 ## Problem ##
   > Describe the problem your product solves.
+Much of car maintenance is based on factory recommendation or a shop telling you that it would be in
+your best interest to take care of some work preemptively.  The rest of the time we only fix things
+as they break.  C² will allow the user to make an informed decision based on other car owners that
+care about their rides, rather than having to trust a shop or a manufacturer's (possibly biased)
+recommendation.
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+C² only asks for basic car info and immediately gives you important warnings and optional
+suggestions for keeping your car healthy.
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+Make protecting your car and preventing issues more intuitive by getting involved with Car Culture today.
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
+Just head over to www.___________.com
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+This app is great!  I was just going to check out upgrades until I found out that my timing belt commonly breaks in the next 5k
+miles and got in to a trusted local shop immediately, saving myself from a potential full engine replacement others had to deal with.
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+Come check us out at www.___________.com and get involved in Car Culture today!
