@@ -1,5 +1,13 @@
 var url = '/eventData';
-var userVehicle = {"year": 2002, "make": "Subaru", "model": "Impreza", "trim": "WRX", "body-type": "wagon", "mileage": 102053, "mods": ["cai", "exhaust", "intercooler"], "events": {} };
+var userVehicle = {"year": 2002,
+                   "make": "Subaru",
+                  "model": "Impreza",
+                   "trim": "WRX",
+              "body-type": "wagon",
+                "mileage": 102053,
+                   "mods": ["cai", "exhaust", "intercooler"],
+                 "events": {}
+                  };
 $("#getVehicleData").on('click', function(event) {
   console.log('getVehicleData button clicked!');
   event.preventDefault();
