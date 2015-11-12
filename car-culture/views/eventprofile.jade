@@ -10,7 +10,18 @@ block content
       h2 This will be the home of all your vehicle data.
       p Check the database for vehicle events to get started!
       p
-        a.btn.btn-primary.btn-lg(href='#', role='button') Get Vehicle Event Data
+        a#getVehicleData.btn.btn-primary.btn-lg(href='#', role='button') Get Vehicle Event Data
     footer.footer
       .container
         p.text-muted
+    script.
+      var url = '/eventData';
+      $("#getVehicleData").on('click', function(event) {
+      console.log('getVehicleData button clicked!');
+      event.preventDefault();
+      $.get(url, {data: 'wrx'}, function(resp) {
+      for (var key in resp) {
+        console.log('User ID: ', key, ' Body Style: ', resp[key]['body-type'], ' Mileage: ', resp[key].mileage);
+        }
+      });
+      });
