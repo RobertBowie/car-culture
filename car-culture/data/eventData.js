@@ -8,14 +8,15 @@ var dbSim = function(options, cb) {
           "model": "Impreza",
           "trim": "WRX",
           "body-type": "wagon",
-          "mileage": 102053,
-          "mods": ["cai", "exhaust", "intercooler"],
+          "mileage": 135000,
+          "mods": [],
           "events": 
             {
-              "22500": "drivetrain issue",
-              "25500": "window issue",
-              "55500": "wheel issue",
-              "105000": "consider a nested obj for issue storage"
+              "22500": "replaced air freshener",
+              "25500": "window cleaned",
+              "55500": "wheel issue (bent rim)",
+              "105000": "Transmission replaced",
+              "125255": "Fuel smell fixed (TSB)"
             }
         },
       "userID2": 
@@ -25,14 +26,17 @@ var dbSim = function(options, cb) {
           "model": "Impreza",
           "trim": "WRX",
           "body-type": "sedan",
-          "mileage": 55000,
-          "mods": ["cai", "exhaust", "intercooler"],
+          "mileage": 155000,
+          "mods": ["cai"],
           "events": 
             {
               "22500": "drivetrain issue",
               "25500": "window issue",
-              "55500": "wheel issue",
-              "105000": "consider a nested obj for issue storage"
+              "35425": "AC went out.",
+              "47030": "Paint flaking from hood",
+              "55500": "wheel issue (corrosion)",
+              "108272": "Had to replace the head-gasket",
+              "152777": "Timing belt snapped - severe engine damage"
             }
         },
       "userID3": 
@@ -42,14 +46,14 @@ var dbSim = function(options, cb) {
           "model": "Impreza",
           "trim": "WRX",
           "body-type": "wagon",
-          "mileage": 75000,
-          "mods": ["cai", "exhaust", "intercooler"],
+          "mileage": 175000,
+          "mods": ["cai", "exhaust"],
           "events": 
             {
-              "22500": "drivetrain issue",
-              "25500": "window issue",
-              "55500": "wheel issue",
-              "105000": "consider a nested obj for issue storage"
+              "33425": "Rust on exhaust - replaced",
+              "48030": "Power steering pump replaced",
+              "110200": "Transmission grinding - replaced fluid",
+              "115700": "Turbo seal leaking - upgraded to STI turbo"
             }
         },
       "userID4": 
@@ -59,14 +63,16 @@ var dbSim = function(options, cb) {
           "model": "Impreza",
           "trim": "WRX",
           "body-type": "sedan",
-          "mileage": 105000,
-          "mods": ["cai", "exhaust", "intercooler"],
+          "mileage": 115000,
+          "mods": ["cai", "exhaust", "intercooler", "turbo"],
           "events": 
             {
               "22500": "drivetrain issue",
               "25500": "window issue",
-              "55500": "wheel issue",
-              "105000": "consider a nested obj for issue storage"
+              "35555": "Seat springs worn out - replaced under warranty",
+              "47130": "Stock tires - replaced",
+              "105500": "Blown turbo - dealer replaced",
+              "110800": "Worn struts upgraded"
             }
         },
       "userID5": 
@@ -77,13 +83,15 @@ var dbSim = function(options, cb) {
           "trim": "WRX",
           "body-type": "sedan",
           "mileage": 110000,
-          "mods": ["cai", "exhaust", "intercooler"],
+          "mods": ["cai", "exhaust", "intercooler", "wheels"],
           "events": 
             {
               "22500": "drivetrain issue",
               "25500": "window issue",
-              "55500": "wheel issue",
-              "105000": "consider a nested obj for issue storage"
+              "35425": "Spark plugs replaced",
+              "47030": "Stock tires - replaced",
+              "55500": "wheel issue - replaced",
+              "105000": "Noisy lifter - replaced"
             }
         },
       "userID6": 
@@ -93,14 +101,18 @@ var dbSim = function(options, cb) {
           "model": "Impreza",
           "trim": "WRX",
           "body-type": "wagon",
-          "mileage": 92050,
-          "mods": ["cai", "exhaust", "intercooler"],
+          "mileage": 192050,
+          "mods": ["cai", "exhaust", "intercooler", "pipes", "bolt-ons"],
           "events": 
             {
               "22500": "drivetrain issue",
               "25500": "window issue",
+              "35425": "General tune-up required",
+              "47030": "Brakes replaced",
               "55500": "wheel issue",
-              "105000": "consider a nested obj for issue storage"
+              "107800": "Full service due to cold start problems",
+              "110000": "Engine blew up - replaced/upgraded",
+              "120222": "Too much power - smiled on accident"
             }
         },
       "userID7": 
@@ -116,8 +128,10 @@ var dbSim = function(options, cb) {
             {
               "22500": "drivetrain issue",
               "25500": "window issue",
+              "35425": "Right rear wheel bearing - replaced",
+              "47030": "Split join hex gear mod - replaced",
               "55500": "wheel issue",
-              "105000": "consider a nested obj for issue storage"
+              "107111": "Considering an upgrade to E83 due to fuel issues"
             }
         },
       "userID8": 
@@ -133,8 +147,10 @@ var dbSim = function(options, cb) {
             {
               "22500": "drivetrain issue",
               "25500": "window issue",
+              "35425": "A thing broke - fixed it",
+              "47030": "Stock tires - replaced",
               "55500": "wheel issue",
-              "105000": "consider a nested obj for issue storage"
+              "112000": "Fuel lines clogged - flushed clear"
             }
         }
     } );
