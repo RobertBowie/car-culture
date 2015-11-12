@@ -8,3 +8,11 @@ $("#getVehicleData").on('click', function(event) {
     }
   });
 });
+
+//-----------------------------------------------------------
+// Page manipulation:
+//-----------------------------------------------------------
+
+function appendVepInfo(data) {
+  
+};
