@@ -30,6 +30,7 @@ a {
 .jumbotron {
   background-color: #D5D5D5;
   height: 615px;
+  width: 90%;
   padding: 10px;
 }
 

@@ -24,8 +24,30 @@ $("#getVehicleData").on('click', function(event) {
 //-----------------------------------------------------------
 
 function appendVepInfo(data) {
+  var $dbEvents = $('.dbevents');
+  var vehicleCount = 0;
   for (var key in data) {
+    vehicleCount++;
+  }
+  $dbEvents.append($(
+    '<h2>There are ' + vehicleCount + ' vehicles with relevant data!</h2>'
+  ));
+  $dbEvents.append($(
+    '<h3>Here are some things that users mention happening in the coming miles:</h3>'
+  ));
+  for (var key in data) {
+    var vehicle = data[key];
     console.log('User ID: ', key, ' Body Style: ',
-      data[key]['body-type'], ' Mileage: ', data[key].mileage);
+      vehicle['body-type'], ' Mileage: ', vehicle.mileage);
+    if ( vehicle.mileage > userVehicle.mileage ) {
+      for (var eventMileage in vehicle.events) {
+        if ( eventMileage > userVehicle.mileage ) {
+          $dbEvents.append($(
+            '<ul><li>Mileage: ' + eventMileage + ' - ' +
+             vehicle.events[eventMileage] + '</li></ul>'
+          ));
+        }
+      }
+    }
   }
 };
