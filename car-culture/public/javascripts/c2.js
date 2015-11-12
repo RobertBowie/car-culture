@@ -1,3 +1,6 @@
+//-----------------------------------------------------------
+// Environment variables:
+//-----------------------------------------------------------
 var url = '/eventData';
 var userVehicle = {"year": 2002,
                    "make": "Subaru",
@@ -8,6 +11,10 @@ var userVehicle = {"year": 2002,
                    "mods": ["cai", "exhaust", "intercooler"],
                  "events": {}
                   };
+var dbData = {};
+//-----------------------------------------------------------
+// AJAX request for DB entries
+//-----------------------------------------------------------
 $("#getVehicleData").on('click', function(event) {
   console.log('getVehicleData button clicked!');
   event.preventDefault();
@@ -15,7 +22,8 @@ $("#getVehicleData").on('click', function(event) {
     // Remove button?
 
     // Use what we get back from the server to build VEP
-    appendVepInfo(resp);
+    dbData = resp;
+    appendVepInfo(dbData);
   });
 });
 
@@ -23,6 +31,9 @@ $("#getVehicleData").on('click', function(event) {
 // Page manipulation:
 //-----------------------------------------------------------
 
+//-----------------------------------------------------------
+// Add the info in it's most basic form:
+//-----------------------------------------------------------
 function appendVepInfo(data) {
   var $dbEvents = $('.dbevents');
   var vehicleCount = 0;
@@ -43,11 +54,29 @@ function appendVepInfo(data) {
       for (var eventMileage in vehicle.events) {
         if ( eventMileage > userVehicle.mileage ) {
           $dbEvents.append($(
-            '<ul><li>Mileage: ' + eventMileage + ' - ' +
-             vehicle.events[eventMileage] + '</li></ul>'
+            '<ul><li class="eventli">Mileage: ' + eventMileage + ' - ' +
+             vehicle.events[eventMileage] + ' <a>see full event</a>' +
+             '</li></ul>'
           ));
         }
       }
     }
   }
 };
+
+//-----------------------------------------------------------
+// Functions for sorting DB info
+//-----------------------------------------------------------
+function sortByMileage() {
+
+};
+
+function sortByMods() {
+
+};
+
+function showMore() {
+
+};
+
+
