@@ -1,5 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 Welcome to your Vehicle Profile!
+  input#getVehicleData(type='submit', value='Get Vehicle Data')
+  #container.col
+    p Checking database for vehicle events...
+    p
+      | While you wait, did you know
+      | we offer many convienient
+      | services and features, such
+      | as mechanic reviews?
