@@ -12,9 +12,10 @@ $("#getVehicleData").on('click', function(event) {
   console.log('getVehicleData button clicked!');
   event.preventDefault();
   $.get(url, {data: 'wrx'}, function(resp) {
-    for (var key in resp) {
-      console.log('User ID: ', key, ' Body Style: ', resp[key]['body-type'], ' Mileage: ', resp[key].mileage);
-    }
+    // Remove button?
+
+    // Use what we get back from the server to build VEP
+    appendVepInfo(resp);
   });
 });
 
@@ -23,5 +24,8 @@ $("#getVehicleData").on('click', function(event) {
 //-----------------------------------------------------------
 
 function appendVepInfo(data) {
-
+  for (var key in data) {
+    console.log('User ID: ', key, ' Body Style: ',
+      data[key]['body-type'], ' Mileage: ', data[key].mileage);
+  }
 };

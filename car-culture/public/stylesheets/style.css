@@ -30,7 +30,7 @@ a {
 .jumbotron {
   background-color: #D5D5D5;
   height: 615px;
-  padding: 75px;
+  padding: 10px;
 }
 
 .btn-lg {
@@ -43,4 +43,9 @@ a {
     color: #fff;
     background-color: #777777;
     border-color: #000000;
+}
+
+.dbevents {
+  margin-top: 15%;
+  font-size: large;
 }
