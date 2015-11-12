@@ -1,12 +1,16 @@
 extends layout
 
 block content
-  h1 Welcome to your Vehicle Profile!
-  input#getVehicleData(type='submit', value='Get Vehicle Data')
-  #container.col
-    p Checking database for vehicle events...
-    p
-      | While you wait, did you know
-      | we offer many convienient
-      | services and features, such
-      | as mechanic reviews?
+  div
+    nav.navbar.navbar-inverse(role='navigation')
+      h1.VEP Vehicle Event Profile
+  div
+    .jumbotron
+      h1 Welcome to your Vehicle Profile!
+      h2 This will be the home of all your vehicle data.
+      p Check the database for vehicle events to get started!
+      p
+        a.btn.btn-primary.btn-lg(href='#', role='button') Get Vehicle Data
+    footer.footer
+      .container
+        p.text-muted
