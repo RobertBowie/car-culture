@@ -41,7 +41,7 @@ function appendVepInfo(data) {
     vehicleCount++;
   }
   $dbEvents.append($(
-    '<h2>There are ' + vehicleCount + ' vehicles with relevant data!</h2>'
+    '<h2>There are <span class="count-span">' + vehicleCount + '</span> vehicles with relevant data!</h2>'
   ));
   $dbEvents.append($(
     '<h3>Here are some things that users mention happening in the coming miles:</h3>'
@@ -64,12 +64,14 @@ function appendVepInfo(data) {
   }
   $dbEvents.append($(
     '<div class="filterdiv">' +
-    '<button type="button" class="btn btn-primary btn-xs">' + 
+    '<button id="mileagefilter" type="button" class="btn btn-primary btn-xs">' + 
     'Mileage</button>' +
-    '<button type="button" class="btn btn-primary btn-xs">' + 
+    '<button id="modsfilter" type="button" class="btn btn-primary btn-xs">' + 
     'Mods</button>' +
-    '<button type="button" class="btn btn-primary btn-xs">' + 
+    '<button id="showmore" type="button" class="btn btn-primary btn-xs">' + 
     'Show More</button>' +
+    '<button id="cleardata" type="button" class="btn btn-primary btn-xs">' + 
+    'Clear Data</button>' +
     '</div>'
   ));
 };
@@ -78,15 +80,47 @@ function appendVepInfo(data) {
 // Functions for sorting DB info
 //-----------------------------------------------------------
 function sortByMileage() {
-
+  var $dbEvents = $('.dbevents');
+  var $eventLi = $('.eventli');
+  // Take dbData and arrange it by mileage:
+  $dbEvents.html('');
 };
 
 function sortByMods() {
-
+  var $dbEvents = $('.dbevents');
+  // Take dbData and arrange it by and display number of mods:
+  $dbEvents.html('');
 };
 
 function showMore() {
-
+  var $dbEvents = $('.dbevents');
+  // Take dbData and show all events (remove mileage conditions):
+  $dbEvents.html('');
 };
 
+function clearData() {
+  var $dbEvents = $('.dbevents');
+  // Take dbData and show all events (remove mileage conditions):
+  $dbEvents.html('');
+};
 
+//-----------------------------------------------------------
+// Event listeners for buttons:
+//-----------------------------------------------------------
+
+$(document.body).on('click', '#mileagefilter', function() {
+  console.log('mileagefilter clicked')
+  sortByMileage();
+});
+$(document.body).on('click', '#modsfilter', function() {
+  console.log('modsfilter clicked')
+  sortByMods();
+});
+$(document.body).on('click', '#showmore', function() {
+  console.log('showmore clicked')
+  showMore();
+});
+$(document.body).on('click', '#cleardata', function() {
+  console.log('cleardata clicked')
+  clearData();
+});
