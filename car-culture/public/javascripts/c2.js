@@ -82,8 +82,58 @@ function appendVepInfo(data) {
 function sortByMileage() {
   var $dbEvents = $('.dbevents');
   var $eventLi = $('.eventli');
+  var $filterDiv = $('.filterdiv');
+  var entries = [];
   // Take dbData and arrange it by mileage:
-  $dbEvents.html('');
+  $eventLi.remove();
+  $filterDiv.remove();
+  for (var key in dbData) {
+    var vehicle = dbData[key];
+    console.log('User ID: ', key, ' Body Style: ',
+      vehicle['body-type'], ' Mileage: ', vehicle.mileage);
+    if ( vehicle.mileage > userVehicle.mileage ) {
+      for (var eventMileage in vehicle.events) {
+        if ( eventMileage > userVehicle.mileage ) {
+          entries.push({eventMileage: eventMileage, event: vehicle.events[eventMileage]});
+        }
+      }
+    }
+  }
+  var sortedEntries = entries.sort(function(a,b) {
+    if ((a.eventMileage) < (b.eventMileage)) {
+      return - 1;
+    }
+    if ((a.eventMileage) > (b.eventMileage)) {
+      return 1;
+    }
+    return 0;
+  });
+
+  sortedEntries.forEach(function(entry) {
+    $dbEvents.append($(
+      '<ul><li class="eventli">Mileage: ' + entry.eventMileage + ' - ' +
+      entry.event + ' <a>see full event</a>' +
+      '</li></ul>'
+    ));
+  });
+
+  $dbEvents.append($(
+    '<div class="filterdiv">' +
+    '<button id="mileagefilter" type="button" class="btn btn-primary btn-xs">' + 
+    'Mileage</button>' +
+    '<button id="modsfilter" type="button" class="btn btn-primary btn-xs">' + 
+    'Mods</button>' +
+    '<button id="showmore" type="button" class="btn btn-primary btn-xs">' + 
+    'Show More</button>' +
+    '<button id="cleardata" type="button" class="btn btn-primary btn-xs">' + 
+    'Clear Data</button>' +
+    '</div>'
+  ));
+  // $dbEvents.append($(
+  //   '<ul><li class="eventli">Mileage: ' + eventMileage + ' - ' +
+  //    vehicle.events[eventMileage] + ' <a>see full event</a>' +
+  //    '</li></ul>'
+  // ));
 };
 
 function sortByMods() {
