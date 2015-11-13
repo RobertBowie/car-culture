@@ -54,3 +54,14 @@ a {
 .eventli {
   margin-left: -50px;
 }
+
+.filterdiv {
+  margin: 20px -20px;
+}
+
+.btn-xs {
+  background-color: #222;
+  border-color: #FFFFFF;
+  margin: 0 10px;
+  font-size: 20px;
+}

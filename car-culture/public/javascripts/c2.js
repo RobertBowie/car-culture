@@ -62,6 +62,16 @@ function appendVepInfo(data) {
       }
     }
   }
+  $dbEvents.append($(
+    '<div class="filterdiv">' +
+    '<button type="button" class="btn btn-primary btn-xs">' + 
+    'Mileage</button>' +
+    '<button type="button" class="btn btn-primary btn-xs">' + 
+    'Mods</button>' +
+    '<button type="button" class="btn btn-primary btn-xs">' + 
+    'Show More</button>' +
+    '</div>'
+  ));
 };
 
 //-----------------------------------------------------------
