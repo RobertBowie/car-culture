@@ -1,5 +1,5 @@
 # car-culture
-This is a project I completed as a student at [Hack Reactor Remote Beta](http://www.hackreactor.com/remote-beta).  This was a solo project, designed to excercise the ability to realistically scope and develop with a tight deadline.
+This is a project I completed as a student at [Hack Reactor Remote Beta](http://www.hackreactor.com/remote-beta).  This was a solo project, designed to excercise the ability to realistically scope and develop within a tight deadline.
 
 ## Product Summary ##
   > C² answers the question 'What next?'.  You tell the app a bit about your car and the app digs through
